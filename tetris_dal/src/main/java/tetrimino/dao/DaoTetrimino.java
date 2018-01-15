@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import model_tetrimino.Tetrimino;
 
 @Repository
-public class DaoTetrimino implements IDaoGeneric <Tetrimino>{
+public class DaoTetrimino implements IDaoGeneric<Tetrimino> {
 	@Autowired
 	private Connection conn;
 
@@ -37,20 +37,30 @@ public class DaoTetrimino implements IDaoGeneric <Tetrimino>{
 
 	public void ajoutPiece(Tetrimino t) {
 
-		PreparedStatement ps;
+		System.out.println("Test ajoutPiece");
 		try {
-			ps = conn.prepareStatement("insert into tetrimino(nom,couleur) values (?,?)");
-			ps.setString(1, t.getNom());
-			ps.setString(2, t.getCouleur());
+			PreparedStatement ps;
+			ps = conn.prepareStatement("insert into tetrimino(idtetrimino,nom,couleur) values (?,?,?)");
+			ps.setInt(1, t.getId());
+			ps.setString(2, t.getNom());
+			ps.setString(3, t.getCouleur());
 			ps.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
-
 	}
-
 	
+//	public void insertTetrimino(int id, String nom, String couleur) throws SQLException {
+//		String str = "INSERT into tetrimino (id, name, color) values(?,?,?)";
+//		PreparedStatement ps = conn.prepareStatement(str);
+//		Tetrimino t = new Tetrimino();
+//		ps.setInt(1, id);
+//		ps.setString(2, nom);
+//		ps.setString(3, couleur);
+//		ps.executeUpdate();
+//	}
+
 	public Tetrimino findById(int id) {
 		System.out.println("Recherche ...");
 		try {
@@ -66,7 +76,7 @@ public class DaoTetrimino implements IDaoGeneric <Tetrimino>{
 		try {
 			List<Tetrimino> retour = new ArrayList<Tetrimino>();
 			ResultSet rs = conn.createStatement().executeQuery("SELECT * from tetrimino");
-			while(rs.next()) {
+			while (rs.next()) {
 				Tetrimino t = new Tetrimino();
 				t.setId(rs.getInt(1));
 				t.setNom(rs.getString(2));
@@ -81,18 +91,23 @@ public class DaoTetrimino implements IDaoGeneric <Tetrimino>{
 		return null;
 	}
 
+
 	
 	public boolean save(Tetrimino t) {
 		// (if id!null)
 		// //modif
 		// else
 		// //ajout
-		
+
 		PreparedStatement ps;
 		try {
-			ps = conn.prepareStatement("insert into tetrimino (nom, couleur) values (?,?)");
+			// ps = conn.prepareStatement("insert into tetrimino (nom, couleur) values
+			// (?,?)");
+			ps = conn.prepareStatement(
+					"replace (nom,'%',?), replace (couleur,'%',?) where idtetrimino = ? from tetrimino");
 			ps.setString(1, t.getNom());
 			ps.setString(2, t.getCouleur());
+			ps.setInt(3, t.getId());
 			ps.executeUpdate();
 			return true;
 		} catch (SQLException e) {
@@ -103,7 +118,11 @@ public class DaoTetrimino implements IDaoGeneric <Tetrimino>{
 
 	@Override
 	public boolean delete(Tetrimino t) {
-		// TODO Auto-generated method stub
+//		try {
+//	//		conn.createStatement().executeUpdate("DELETE from tetrimino where id= " + id);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
 		return false;
 	}
 }
