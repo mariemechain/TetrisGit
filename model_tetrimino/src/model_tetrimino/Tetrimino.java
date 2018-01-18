@@ -9,12 +9,12 @@ public class Tetrimino {
 		
 	}
 
-	public Tetrimino(int id, String nom, String couleur) {
-		super();
-		this.id = id;
-		this.nom = nom;
-		this.couleur = couleur;
-	}
+//	public Tetrimino(int id, String nom, String couleur) {
+//		super();
+//		this.id = id;
+//		this.nom = nom;
+//		this.couleur = couleur;
+//	}
 
 	public int getId() {
 		
