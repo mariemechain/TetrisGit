@@ -3,8 +3,8 @@ package main;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import configSpring.AppConfig;
+import dao.DaoTetrimino;
 import model_tetrimino.Tetrimino;
-import tetrimino.dao.DaoTetrimino;
 
 public class Test {
 
