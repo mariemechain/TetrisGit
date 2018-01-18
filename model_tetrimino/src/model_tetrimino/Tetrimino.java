@@ -17,6 +17,7 @@ public class Tetrimino {
 	}
 
 	public int getId() {
+		
 		return id;
 	}
 

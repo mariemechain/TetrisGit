@@ -1,4 +1,4 @@
-package tetrimino.dao;
+package dao;
 import java.util.List;
 
 public interface IDaoGeneric <T> {
