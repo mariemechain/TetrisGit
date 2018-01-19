@@ -2,12 +2,21 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
   <groupId>tetris_modelFAQ</groupId>
   <artifactId>tetris_modelFAQ</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>tetris_modelFAQ</name>
+=======
+  <groupId>modelFaq</groupId>
+  <artifactId>modelFaq</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>modelFaq</name>
+>>>>>>> Marie
   <url>http://maven.apache.org</url>
 
   <properties>
