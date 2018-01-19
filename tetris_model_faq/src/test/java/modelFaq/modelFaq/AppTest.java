@@ -1,4 +1,4 @@
-package coup.coup;
+package modelFaq.modelFaq;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

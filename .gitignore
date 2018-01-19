@@ -1,0 +1,14 @@
+
+<<<<<<< HEAD
+tetris_app_java/\.project
+
+tetris_dao/\.project
+
+tetris_model_tetrimino/\.project
+=======
+tetris_model_tetrimino/bin/\.project
+
+tetris_app_java/bin/\.project
+
+tetris_coup/\.settings/org\.eclipse\.core\.resources\.prefs
+>>>>>>> Marie

@@ -4,6 +4,7 @@
 
   <groupId>tetris_coup</groupId>
   <artifactId>tetris_coup</artifactId>
+
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -109,3 +110,4 @@
 		</plugins>
 	</build>
 </project>
+
