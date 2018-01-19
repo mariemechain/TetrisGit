@@ -1,5 +1,6 @@
 package model_tetrimino;
 
+
 public class Tetrimino {
 	private int id;
 	private String nom;
