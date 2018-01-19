@@ -68,8 +68,18 @@
 		
 		
 		<dependency>
+			<groupId>modelFaq</groupId>
+			<artifactId>modelFaq</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>model_tetrimino</groupId>
 			<artifactId>model_tetrimino</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>authentification</groupId>
+			<artifactId>authentification</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
