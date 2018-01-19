@@ -6,6 +6,16 @@ public class Tetrimino {
 	private String nom;
 	private String couleur;
 
+	public int[][] rotation45deg(int[][] matriceEntree){
+		int size = matriceEntree.length;
+		int[][] matriceRetour = new int[size][size];
+		for(int i=0;i<size;i++) {
+			for(int j=0;j<size;j++)
+				matriceRetour[i][j]=matriceEntree[size-1-j][i];
+		}
+		return matriceRetour;	
+	}
+	
 	public int getId() {
 		return id;
 	}
