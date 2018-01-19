@@ -11,8 +11,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.annotation.Id;
 
 @Entity
-@Cacheable
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY	)
+//@Cacheable
+//@Cache(usage=CacheConcurrencyStrategy.READ_ONLY	)
 @Table(name="tetrimino")
 public class Tetrimino {
 	
