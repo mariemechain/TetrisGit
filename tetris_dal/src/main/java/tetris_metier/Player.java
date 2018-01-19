@@ -1,4 +1,4 @@
-package authentification;
+package tetris_metier;
 
 public class Player {
 

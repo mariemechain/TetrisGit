@@ -4,7 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import configSpring.AppConfig;
 import dao.ITetriminoDAO;
-import model_tetrimino.Tetrimino;
+import tetris_metier.Tetrimino;
 
 public class Test {
 

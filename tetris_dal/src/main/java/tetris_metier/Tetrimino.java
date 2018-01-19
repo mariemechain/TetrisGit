@@ -1,10 +1,11 @@
-package model_tetrimino;
+package tetris_metier;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cache;
@@ -28,6 +29,9 @@ public class Tetrimino {
 	@Column(name="TET_COULEUR")
 	private String couleur;
 
+	@OneToMany(mappedBy="coup")
+	private Coup coup;
+	
 	public int[][] rotation45deg(int[][] matriceEntree){
 		int size = matriceEntree.length;
 		int[][] matriceRetour = new int[size][size];
@@ -64,7 +68,7 @@ public class Tetrimino {
 
 	@Override
 	public String toString() {
-		return "Tetrimino n°"+id+" nom=" + nom + ", couleur=" + couleur;
+		return "Tetrimino nï¿½"+id+" nom=" + nom + ", couleur=" + couleur;
 	}
 
 }

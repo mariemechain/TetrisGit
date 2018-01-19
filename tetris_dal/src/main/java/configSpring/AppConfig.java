@@ -22,7 +22,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 // @EnableTransactionManagement
 @EnableJpaRepositories("dao")
 @PropertySource("classpath:data-source.properties")
-@ComponentScan({ "configSpring","dao" })
+@ComponentScan({ "configSpring","dao", "tetris_metier" })
 public class AppConfig {
 
 	@Autowired
@@ -67,7 +67,7 @@ public class AppConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(BasicDataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(dataSource);
-		emf.setPackagesToScan("configSpring","dao");
+		emf.setPackagesToScan("configSpring","dao", "tetris_metier");
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		emf.setJpaVendorAdapter(vendorAdapter);
 		emf.setJpaProperties(this.hibernateProperties());

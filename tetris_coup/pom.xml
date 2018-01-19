@@ -91,6 +91,15 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--  Dépendance aux classes -->
+		<dependency>
+			<groupId>model_tetrimino</groupId>
+			<artifactId>model_tetrimino</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		
 	</dependencies>
 
 
