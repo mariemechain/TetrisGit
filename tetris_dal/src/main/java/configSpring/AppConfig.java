@@ -56,7 +56,7 @@ public class AppConfig {
 	public BasicDataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl(env.getProperty("mysql.url"));
+		dataSource.setUrl(env.getProperty("sql.url"));
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
 		dataSource.setMaxTotal(10);
