@@ -1,4 +1,4 @@
-package modelFaq;
+package tetris_metier;
 
 
 public class ModelFaq {
