@@ -1,4 +1,4 @@
-package coup;
+package coup.coup;
 
 public class Coup {
 
